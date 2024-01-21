@@ -115,6 +115,26 @@ footer {
   }
 }
 
+@media (max-width: 800px) {
+  footer {
+    small {
+      display: block;
+      float: none;
+      margin-bottom: 1em;
+    }
+
+    ul {
+      float: none;
+      padding: 0;
+
+      li {
+        float: none;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 /* miscellaneous */
 
 .debug_dump {
@@ -122,6 +142,7 @@ footer {
   float: left;
   width: 100%;
   margin-top: 45px;
+  @include box_sizing;
 }
 
 /* sidebar */
@@ -196,4 +217,25 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+/* Dropdown menu */
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
